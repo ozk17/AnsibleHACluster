@@ -7,7 +7,9 @@
     haproxy_port_pg_rw: 5000
     haproxy_port_pg_ro: 5001
     haproxy_port_stats: 7000
-    haproxy_bind_ip: "{{ ansible_default_ipv4.address }}"
+    #haproxy_bind_ip: "{{ ansible_default_ipv4.address }}"
+    haproxy_bind_ip: "{{ ansible_host }}"
+
 
   tasks:
     - name: PostgreSQL node listesi başlat
